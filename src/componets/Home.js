@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { useHistory } from 'react-router-dom';
 import { StateContext } from '../context/StateContext';
+import '../style/Home.css'
 
 const Home = () => {
     let history = useHistory()
@@ -10,9 +11,12 @@ const Home = () => {
     const [user, setUser] = useState({ user: '', pass: '' })
 
     return (
-        <div>
-            <h1>Sv-Bank</h1>
-            <form onSubmit={e => {
+        <div className='home-content'>
+            <div className='title'>
+                <h1>Sv-Bank</h1>
+            </div>
+
+            <form className='login-form' onSubmit={e => {
                 e.preventDefault();
                 if (user.user === admin.user && user.pass === admin.pass) {
                     history.push('/admin')

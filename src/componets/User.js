@@ -18,7 +18,7 @@ const User = () => {
 
     return (
         <div>
-            <h1>Welcome User</h1>
+            <h1>Welcome <span id='user-name'>{customers[userIndex].name}</span></h1>
             <button onClick={() => {
                 alert(customers[userIndex].money)
             }}>BALANCE</button><br />
